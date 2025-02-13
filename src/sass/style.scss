@@ -41,7 +41,7 @@ h2 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-image: url('/src/img/BACKGROUND.png');
+	background-image: url('src/img/BACKGROUND.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -95,12 +95,12 @@ h2 {
 	font-size: 120px;
 	letter-spacing: 3px;
 	margin-top: -300px;
-	text-shadow: 1px 1px 5px #ca0c0c, -2px -2px 4px #85BB65;
+	text-shadow: 1px 1px 5px #ca0c0c, -2px -2px 4px #85bb65;
 	margin-bottom: 200px;
 }
 
 .hero-content h1 span {
-	color: #85BB65;
+	color: #85bb65;
 	font-size: 130px;
 	display: block;
 	margin-left: 800px;
@@ -113,7 +113,7 @@ h2 {
 .hero-content h1::after {
 	content: '';
 	position: absolute;
-	background-image: url('/src/img/crown.png');
+	background-image: url('src/img/crown.png');
 	background-size: cover;
 	top: -40px;
 	left: 270px;
@@ -128,7 +128,7 @@ h2 {
 	text-transform: uppercase;
 	padding: 20px 50px;
 	color: #000000;
-	text-shadow: 3px 3px 5px #f1eeff, -2px -2px 5px #85BB65;
+	text-shadow: 3px 3px 5px #f1eeff, -2px -2px 5px #85bb65;
 	letter-spacing: 3px;
 	font-weight: 700;
 	font-size: 40px;
@@ -158,17 +158,17 @@ h2 {
 	}
 
 	.card-container {
-        display: flex;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); // Responsive cards
-        grid-gap: 20px;
-    }
+		display: flex;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); // Responsive cards
+		grid-gap: 20px;
+	}
 
 	.card {
-        background: linear-gradient(90deg, #e6f0e023 38%, rgba(105, 4, 139, 0.082) 90%);
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        text-align: center;  /* Center the text within cards */
+		background: linear-gradient(90deg, #e6f0e023 38%, rgba(105, 4, 139, 0.082) 90%);
+		padding: 10px;
+		border-radius: 10px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+		text-align: center; /* Center the text within cards */
 
 		p {
 			display: inline-block;
@@ -177,17 +177,16 @@ h2 {
 			font-weight: 900;
 		}
 
-        .card-image { // Styles for image container in the second card
-            margin-bottom: 10px;
-            
-            img {
+		.card-image {
+			// Styles for image container in the second card
+			margin-bottom: 10px;
+
+			img {
 				padding: 5px;
-                max-width: 100%;
-                height: auto;
-                border-radius: 10px; // Match image corners to card
-            }
-
-
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px; // Match image corners to card
+			}
 		}
 	}
 	.tape-container {
@@ -195,7 +194,7 @@ h2 {
 		overflow: hidden;
 		border-bottom: solid white;
 		border-top: solid white;
-		font-family: "Libre Baskerville", serif;
+		font-family: 'Libre Baskerville', serif;
 		background: #000000;
 		padding: 20px 0;
 		position: relative;
@@ -242,43 +241,39 @@ h2 {
 	}
 }
 
-
-
 /* Gallery Section */
 .gallery {
-	background-color: #85BB65;
+	background-color: #85bb65;
 	text-align: center;
 }
 
 .image-gallery {
-    padding: 50px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+	padding: 50px 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 40px;
 
-    img {
-        width: 130%;
-        height: auto;
-        display: inline;
-        border-radius: 5px;
-        box-shadow: 3px 3px 10px rgb(25, 29, 14);
-        transition: transform 0.3s ease; // Add the transition
+	img {
+		width: 130%;
+		height: auto;
+		display: inline;
+		border-radius: 5px;
+		box-shadow: 3px 3px 10px rgb(25, 29, 14);
+		transition: transform 0.3s ease; // Add the transition
 
-        &:hover {
-            transform: scale(1.1); // Increase size on hover
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); // Optional: enhance shadow
-        }
-    }
+		&:hover {
+			transform: scale(1.1); // Increase size on hover
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Optional: enhance shadow
+		}
+	}
 }
-
-
 
 /* Social Information Section */
 .social {
 	display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center-align the content horizontally */
-    text-align: center; /* Center-align text */
+	flex-direction: column; /* Stack children vertically */
+	align-items: center; /* Center-align the content horizontally */
+	text-align: center; /* Center-align text */
 	background-color: #000000;
 	// padding: 80px 0;
 	// text-align: center;
@@ -308,7 +303,7 @@ h2 {
 	width: 100px; // Set a fixed width and height
 	height: 100px;
 	border-radius: 50%; // Make it round
-	background-color: #85BB65; // Background for when icon isn't loaded
+	background-color: #85bb65; // Background for when icon isn't loaded
 	overflow: hidden; // Hide any parts of the image that overflow
 
 	img {
@@ -472,10 +467,9 @@ h2 {
 	}
 }
 
-
 /* Media Query for smaller screens (adjust breakpoint as needed) */
 @media (max-width: 768px) {
-    .about-content .card-container {
-        grid-template-columns: 1fr; // Stack cards vertically
-    }
+	.about-content .card-container {
+		grid-template-columns: 1fr; // Stack cards vertically
+	}
 }
