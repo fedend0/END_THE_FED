@@ -1,0 +1,376 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: linear-gradient(90deg, rgb(106, 4, 139) 38%, rgb(0, 212, 255) 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Image Layer */
+.image-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/img/BACKGROUND.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* This is what creates the parallax effect */
+  z-index: -1;
+  opacity: 0.6; /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+.image-layer2 {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1; /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.image-layer3 {
+  position: absolute;
+  bottom: 240px;
+  right: -600px;
+  width: auto;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  display: block;
+  transform: translateX(-50%) rotate(30deg);
+  animation: slideImages 2s ease-in-out;
+}
+
+/* Logo */
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: clamp(250px, 10vw, 10px);
+  height: auto;
+  z-index: 100;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  position: relative;
+  font-size: 120px;
+  letter-spacing: 3px;
+  margin-top: -300px;
+  text-shadow: 1px 1px 5px #ff0000, -2px -2px 4px #00ff00;
+  margin-bottom: 200px;
+}
+
+.hero-content h1 span {
+  color: #cde99a;
+  font-size: 130px;
+  display: block;
+  margin-left: 800px;
+  margin-top: -60px;
+  transform-origin: top left;
+  transform: rotate(70deg);
+  animation: swing 2s ease-in-out infinite;
+}
+
+.hero-content h1::after {
+  content: "";
+  position: absolute;
+  background-image: url("/src/img/crown.png");
+  background-size: cover;
+  top: -40px;
+  left: 270px;
+  width: 90px;
+  height: 90px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 350px;
+  padding: 20px 50px;
+  color: #ffffff;
+  text-shadow: 5px 5px 10px #3212b1, -2px -2px 5px #e0fd37;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+/* About Section */
+.about {
+  position: relative;
+  background: linear-gradient(90deg, rgb(0, 212, 255) 38%, rgb(106, 4, 139) 90%);
+  height: 100vh;
+  width: auto;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.about-bar {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  background: rgba(9, 9, 9, 0.281);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(10, 10, 10, 0.05);
+}
+.about-bar .bar-text {
+  position: absolute;
+  line-height: 1.5em;
+  color: #fff;
+  font-size: 40px;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.about-bar .bar-text .bold-red {
+  display: inline-block;
+  color: #f03232;
+  font-weight: 700;
+}
+.about-bar .bar-text .bold-yellow {
+  color: #e0fd37;
+}
+
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.3;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-content {
+  text-align: center;
+  color: #fff;
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Social Information Section */
+.social {
+  background-color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-block;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3fac1f;
+  overflow: hidden;
+}
+.social-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.social-link:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(60deg); /* Rotate span to the left */
+  }
+  50% {
+    transform: rotate(70deg); /* Rotate span to the right */
+  }
+  100% {
+    transform: rotate(60deg); /* Rotate span to the left */
+  }
+}
+@keyframes slideImages {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 240px;
+    opacity: 1; /* Adjust translation as needed */
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-content h1,
+  span {
+    font-size: 70px;
+    margin-top: 0;
+  }
+  .hero-content h1 span {
+    margin-left: 500px;
+    margin-top: -35px;
+    font-size: 90px;
+  }
+  .hero-content h1::after {
+    top: -25px;
+    left: 190px;
+    width: 50px;
+    height: 50px;
+  }
+  .image-layer3 {
+    bottom: 70px;
+    right: -300px;
+    width: auto;
+    height: 35%;
+  }
+  .hero-content p {
+    top: 240px;
+    font-size: 20px;
+  }
+  .logo {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    margin: 0 auto;
+  }
+  .about-bar .bar-text {
+    font-size: 30px;
+  }
+  .about-bar .bar-text .bold-red {
+    font-size: 30px;
+  }
+  .about-bar .bar-text .bold-yellow {
+    font-size: 30px;
+  }
+  @keyframes slideImages {
+    0% {
+      bottom: -240px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 70px;
+      opacity: 1; /* Adjust translation as needed */
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+  .hero-content h1 span {
+    margin-left: 400px;
+    margin-top: -27px;
+    font-size: 70px;
+  }
+  .hero-content p {
+    top: 270px;
+    line-height: 22px;
+    padding: 0 80px;
+    font-size: 12px;
+  }
+  .hero-content h1::after {
+    top: -22px;
+    left: 158px;
+    width: 40px;
+    height: 40px;
+  }
+  .image-layer3 {
+    bottom: 50px;
+    right: -160px;
+    width: auto;
+    height: 25%;
+  }
+  .about-bar .bar-text {
+    font-size: 20px;
+  }
+  .about-bar .bar-text .bold-red {
+    font-size: 20px;
+  }
+  .about-bar .bar-text .bold-yellow {
+    font-size: 20px;
+  }
+  .logo {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    margin: 0 auto;
+  }
+  @keyframes slideImages {
+    0% {
+      bottom: -200px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 50px;
+      opacity: 1; /* Adjust translation as needed */
+    }
+  }
+}/*# sourceMappingURL=style.css.map */
